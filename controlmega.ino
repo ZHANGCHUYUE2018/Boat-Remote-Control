@@ -71,25 +71,25 @@ void Move (){ //Remote control movement
     servoRight.write(map(channel4, 2000, 950, 0, 180));
     servoLeft.write(map(channel4, 2000, 950, 0, 180));
   }
-  if (channel2 > 1470 & channel2 < 1530) {
+  if (channel3 > 1470 & channel3 < 1530) {
     //Range to stop rear thrusters
     thrusterRearRight.writeMicroseconds(1500);
     thrusterRearLeft.writeMicroseconds(1500);
   }
   else {
     //Rear thrusters signal
-    thrusterRearRight.writeMicroseconds(map(channel2, 988, 2012, 1100, 1900));
-    thrusterRearLeft.writeMicroseconds(map(channel2, 988, 2012, 1100, 1900));
+    thrusterRearRight.writeMicroseconds(map(channel3, 988, 2012, 1100, 1900));
+    thrusterRearLeft.writeMicroseconds(map(channel3, 988, 2012, 1100, 1900));
   }
-  if (channel3 > 1470 & channel3 < 1530) {
+  if (channel2 > 1470 & channel2 < 1530) {
     //Range to stop front thrusters
     thrusterFrontRight.writeMicroseconds(1500);
     thrusterFrontLeft.writeMicroseconds(1500);
   }
   else {
     //Front thrusters signal
-    thrusterFrontRight.writeMicroseconds(map(channel3, 988, 2012, 1100, 1900));
-    thrusterFrontLeft.writeMicroseconds(map(channel3, 988, 2012, 1100, 1900));
+    thrusterFrontRight.writeMicroseconds(map(channel2, 988, 2012, 1100, 1900));
+    thrusterFrontLeft.writeMicroseconds(map(channel2, 988, 2012, 1100, 1900));
   }
 }
 
