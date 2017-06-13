@@ -53,13 +53,13 @@ void read_values () {
 void select(){
   //Use channel 5 to select current mode
   if (channel5 > 1600){
-    move_1();
+    move_2();
   }
   else if (channel5 < 1400){
-    DP();
+    power_Difference();
   }
   else{
-    move_2();
+    autonomous_Mode();
   }
 }
 
@@ -124,7 +124,7 @@ void move_2 (){ //Remote control movement
   }
 }
 
-void DP(){
+void power_Difference(){
   float y;
   float R;
   float L;
@@ -166,6 +166,10 @@ void DP(){
     thrusterFrontRight.writeMicroseconds(R);
     thrusterFrontLeft.writeMicroseconds(L);
   }
+}
+
+void autonomous_Mode(){
+ 
 }
 
 void loop() {
